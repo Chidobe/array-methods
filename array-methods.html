@@ -5,7 +5,7 @@
   <title>Array Methods Practice | WES BOS</title>
 </head>
 <body>
-  
+  <div></div>
   <script>
     
 
@@ -39,6 +39,9 @@
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
+   const fnl =  inventors.map(function(f, l){
+        return (f,l).join(' ')
+    })
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
@@ -58,7 +61,10 @@
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-
+    
+    
+    const output = document.querySelector('div');
+    output.append(fnl);
   </script>
 </body>
 </html>
