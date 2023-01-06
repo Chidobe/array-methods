@@ -5,7 +5,8 @@
   <title>Array Methods Practice | WES BOS</title>
 </head>
 <body>
-  <h1></h1>
+  <h3></h3>
+  <ul></ul>
   <script>
     
 
@@ -36,12 +37,17 @@
     
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
+    const oldInventors = inventors.filter(invent => {
+        if (invent.year >= 1500 && invent.year <= 1599){
+            return true
+        }
+    });
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names_ 
     // So this is an aray of objects, each object represents 1 array element - remember this
    const fullName =  inventors.map(name => {
-    return " " + name.first + " " + name.last 
+    return " " + name.first + " " + name.last
    });
 
     // Array.prototype.sort()
@@ -64,8 +70,10 @@
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
     
     
-    const output = document.querySelector('h1');
+    const output = document.querySelector('h3');
+    const list = document.querySelector('ul');
     output.append(fullName);
+    list.append(oldInventors)
     
   </script>
 </body>
