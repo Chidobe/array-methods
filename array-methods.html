@@ -40,9 +40,9 @@
     const oldInventors = inventors.filter(invent => {
         if (invent.year >= 1500 && invent.year <= 1599){
             return true
-        }
+        } 
     });
-
+    console.table(oldInventors)
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names_ 
     // So this is an aray of objects, each object represents 1 array element - remember this
@@ -52,6 +52,17 @@
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
+    //const sorted = inventors.sort((a,b) => {
+    //     if (a.year > b.year){
+    //         return 1;
+    //     } else {
+    //         return -1;
+    //     }
+    // });
+
+    //using one line arrow function with ternary operator
+    const sorted = inventors.sort((a,  b) => a.year > b.year ? 1 : -1);
+    console.table(sorted)
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
