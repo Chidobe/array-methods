@@ -35,6 +35,8 @@
       'Billings, Josh', 'Birrell, Augustine', 'Blair, Tony', 'Beecher, Henry', 'Biondo, Frank'
     ];
     
+
+
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
     const oldInventors = inventors.filter(invent => {
@@ -50,6 +52,8 @@
     return " " + name.first + " " + name.last
    });
 
+
+
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
     //const sorted = inventors.sort((a,b) => {
@@ -64,8 +68,13 @@
     const sorted = inventors.sort((a,  b) => a.year > b.year ? 1 : -1);
     console.table(sorted)
 
+
+
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
+        const totalYears = inventors.reduce((total, inventor) => total + (inventor.passed - inventor.year), 0);
+        console.log(totalYears)
+
 
     // 5. Sort the inventors by years lived
 
@@ -81,10 +90,7 @@
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
     
     
-    const output = document.querySelector('h3');
-    const list = document.querySelector('ul');
-    output.append(fullName);
-    list.append(oldInventors)
+    
     
   </script>
 </body>
