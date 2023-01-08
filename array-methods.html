@@ -5,13 +5,13 @@
   <title>Array Methods Practice | WES BOS</title>
 </head>
 <body>
+
   <h3></h3>
   <ul></ul>
+
   <script>
-    
 
     // Data we can work with
-
     const inventors = [
       { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
       { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
@@ -90,16 +90,21 @@
     // 7. sort Exercise
     // Sort the people alphabetically by last name
 
+
     // 8. Reduce Exercise
     // Sum up the instances of each of these
-    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-    let sumInstamce = [];
-     for (let i = 0; 1 < data.length; i++){
-        if 
-     }
-    
-    
-    
+    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
+        const vehicle = data.reduce((newObj, currentVehicle) => {
+            if (!newObj[currentVehicle]){
+                newObj[currentVehicle] = 0;
+            }
+                newObj[currentVehicle]++;
+                return newObj;
+            
+        },{})
+
+        console.log(vehicle)
   </script>
+
 </body>
 </html>
